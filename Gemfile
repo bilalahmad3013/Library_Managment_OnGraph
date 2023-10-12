@@ -61,3 +61,7 @@ group :development do
 
 end
 
+
+gem "jsbundling-rails", "~> 1.2"
+
+gem "devise", "~> 4.9"
