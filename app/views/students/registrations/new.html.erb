@@ -45,10 +45,10 @@
     <%= f.label :pincode %><br />
     <%= f.text_field :pincode %>
   </div>
-
+  
   <div class="field">
   <%= f.label :state %><br />
-  <%= f.text_field :state %>
+  <%= f.collection_select(:state, State.all, :id, :name, prompt: 'Select a state') %>
   </div>
 
 

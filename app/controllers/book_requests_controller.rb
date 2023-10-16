@@ -4,18 +4,20 @@ class BookRequestsController < ApplicationController
       book = Book.find(book_id) if book_id.present?
       librarian_id = book.librarian_id
       librarian=Librarian.find(librarian_id)  
-      student=current_student     
+      student=current_student      
   
       if book
         request = Request.new(book_id: book_id, student_id: student.id)
-        request.save
-        BookRequestMailer.send_book_request(book, librarian,student).deliver_now
-        flash[:success] = "Request sent to librarian!"
+        request.save        
+        BookRequestMailer.send_book_request(book, librarian,student).deliver_now 
+       
+        render json: { msg: "true" }     
       else
-        flash[:error] = "Book not found."
+        flash[:error] = "Book request not sent successfully"
+        render json: { msg: "false" }   
       end
   
-      redirect_to root_path 
+      
     end
     
 

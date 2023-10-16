@@ -23,8 +23,11 @@ gem 'cancancan'
 #Kaminari gem is for pagination
 gem 'kaminari'
 
-
+#to apply bootstrap javascript
 gem 'jquery-rails'
+
+#for the seeds.rb run
+gem 'seed-fu'
 
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]

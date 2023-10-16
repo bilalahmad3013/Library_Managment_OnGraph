@@ -1,7 +1,9 @@
 class StudentFeaturesController < ApplicationController
 
     def index
-        @books = Book.page(params[:page]).per(5) # Paginate with 5 books per page
+        @books = Book.page(params[:page]).per(5)
+
+       
       end
       
     

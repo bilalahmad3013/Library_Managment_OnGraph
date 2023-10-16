@@ -56,12 +56,11 @@
     <%= f.label :pincode %>
     <%= f.text_field :pincode %>
   </div>
-
+  
   <div class="field">
-  <%= f.label :state %>
-  <%= f.text_field :state %>
+  <%= f.label :state %><br />
+  <%= f.collection_select(:state, State.all, :id, :name, prompt: 'Select a state') %>
   </div>
-
 
   <div class="actions">
     <%= f.submit "Update" %>
