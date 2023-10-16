@@ -1,0 +1,14 @@
+<h1>Hey you can edit the book from here</h1>
+<%= form_with(model: @book, url: book_path) do |form| %>    
+    <%= form.label :title, 'Book Title' %>
+    <%= form.text_field :title %>
+  
+    <%= form.label :author, 'Author' %>
+    <%= form.text_field :author %>
+  
+    <%= form.label :pages, 'Number of Pages' %>
+    <%= form.number_field :pages %>
+  
+    <%= form.submit 'Create Book' %>
+ <% end %>
+<a href="/" class="card-link">Back to Home Page</a>  

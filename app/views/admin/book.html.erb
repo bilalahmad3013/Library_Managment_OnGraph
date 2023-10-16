@@ -1,0 +1,11 @@
+ <h3 style="margin-left:42%;margin-top:10px"> <%= @student.first_name%> have applied on <%= @books.length%>  books</h3>
+<a href="/" class="card-link">Back to Home Page</a>  
+<% @books.each do |book| %>
+    <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Title - <%= book.title%></h5>
+      <h6 class="card-subtitle mb-2 text-muted">Author - <%= book.author %></h6>
+      <p class="card-text">Total Pagges - <%= book.pages %></p> 
+      </div>
+  </div>
+<% end %>    

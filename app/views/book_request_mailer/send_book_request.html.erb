@@ -1,0 +1,14 @@
+<div class="card mb-3" style="width: 300px; display: inline-block;">
+  <div>Hi <%= @librarian.first_name %> ,(<%= @student.first_name %>) requested a book that belongs to you.</div>
+  <br>
+  <div class="card-header">Title-<%= @book.title %></div>
+  <div class="card-body">
+    <h5 class="card-title">Author-<%= @book.author %></h5>
+    <p class="card-text">Pages-<%= @book.pages %></p>   
+      
+    <%= link_to 'Approve Request', approve_request_url(librarian_id: @librarian.id, book_id: @book.id, student_id: @student.id) , data: { confirm: 'Are you sure?' } %>
+    <%= link_to 'Cancel Request', cancel_request_url(librarian_id: @librarian.id, book_id: @book.id, student_id: @student.id), data: { confirm: 'Are you sure?' } %>
+
+    
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<h3 style="margin-left:38%;margin-top:10px">There are a total of <%= @requests.total_count %> requests.</h3>
+<a href="/" class="card-link" style="margin-left:45%">Back to Home Page</a>
+<div class="container" style="margin-top:50px">
+  <% @requests.each do |request| %>
+    <div class="card mb-3" style="width: 300px; display: inline-block;">
+      <div class="card-header">Title-<%= request.book.title %></div>
+      <div class="card-body">
+        <h5 class="card-title">Author-<%= request.book.author %></h5>
+        <p class="card-text">Pages-<%= request.book.pages %></p>
+      </div>
+    </div>
+  <% end %>
+  <div class="pagination">
+    <%= paginate @requests %>
+  </div>
+</div>

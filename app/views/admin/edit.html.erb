@@ -1,0 +1,12 @@
+<%= form_with(model: @book, url: admin_path) do |form| %>    
+    <%= form.label :title, 'Book Title' %>
+    <%= form.text_field :title %>
+  
+    <%= form.label :author, 'Author' %>
+    <%= form.text_field :author %>
+  
+    <%= form.label :pages, 'Number of Pages' %>
+    <%= form.number_field :pages %>
+  
+    <%= form.submit 'Create Book' %>
+ <% end %>

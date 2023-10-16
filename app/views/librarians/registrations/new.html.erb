@@ -9,6 +9,16 @@
   </div>
 
   <div class="field">
+  <%= f.label :first_name %><br />
+  <%= f.text_field :first_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </div>
+
+  <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
@@ -22,22 +32,22 @@
   </div>
 
   <div class="field">
-  <%= f.label :phone_number %>
+  <%= f.label :phone_number %><br />
   <%= f.text_field :phone_number, autofocus: true %>
   </div>
 
   <div class="field">
-    <%= f.label :address %>
+    <%= f.label :address %><br />
     <%= f.text_field :adress %>
   </div>
 
   <div class="field">
-    <%= f.label :pincode %>
+    <%= f.label :pincode %><br />
     <%= f.text_field :pincode %>
   </div>
 
   <div class="field">
-  <%= f.label :state %>
+  <%= f.label :state %><br />
   <%= f.text_field :state %>
   </div>
 
