@@ -1,5 +1,5 @@
 one:
   email: "admin@example.com"
-  # encrypted_password: <%= Devise::Encryptor.digest(Librarian, 'secret_password') %>  
+   encrypted_password: <%= Devise::Encryptor.digest(Librarian, 'secret_password') %>  
   # created_at: '2023-10-17 12:00:00'
   # updated_at: '2023-10-17 12:00:00'

@@ -1,0 +1,19 @@
+databases:
+  - name: sqlite3
+    ipAllowList: []
+    databaseName: library_managment
+    user: library_managment
+
+services:
+  - type: web
+    name: library_managment
+    env: ruby
+    buildCommand: "./render-build.sh"
+    startCommand: "bundle exec rails s"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: sqlite3
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
