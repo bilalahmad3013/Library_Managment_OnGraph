@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-    before_action :authenticate_librarian! 
+     before_action :authenticate_librarian! 
   
     def new
       @book = Book.new

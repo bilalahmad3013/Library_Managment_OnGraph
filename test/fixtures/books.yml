@@ -1,0 +1,8 @@
+# books.yml
+
+one:
+  title: "My First Book"
+  author: "John Doe"
+  pages: 200
+  librarian_id: 1  # Use a valid librarian user's ID
+

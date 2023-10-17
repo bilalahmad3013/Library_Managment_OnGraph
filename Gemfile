@@ -29,6 +29,11 @@ gem 'jquery-rails'
 #for the seeds.rb run
 gem 'seed-fu'
 
+#for test cases
+group :development, :test do
+  gem 'rspec-rails'
+end
+
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
@@ -75,6 +80,11 @@ group :development do
 end
 
 
+
+
 gem "jsbundling-rails", "~> 1.2"
 
 gem "devise", "~> 4.9"
+
+
+gem "rails-controller-testing"
