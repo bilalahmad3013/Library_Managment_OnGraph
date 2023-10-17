@@ -4,7 +4,7 @@
     "bootstrap": "^5.3.2",
     "jquery": "^3.7.1"
   },
-  "scripts": {
-    "build": "webpack --mode production"
+  "scripts": {   
+     "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds" 
   }
 }
