@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get 'cancel_request', to: 'handle_request#cancel_request', as: 'cancel_request'
   delete 'admin/books/:id', to: 'admin#destroy', as: 'admin_delete_book'
   get 'admin/students', to: 'admin#student'
+  get 'book/students/librarian' , to: 'books#showstudent'
   get 'admin/student/books', to: 'admin#book'
   get 'admin/book/students', to: 'admin#studentlist'
   resources :books

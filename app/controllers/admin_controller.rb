@@ -19,6 +19,7 @@ class AdminController < ApplicationController
   
     def destroy
       @book = Book.find(params[:id])
+      StudentBook.where(book_id: @book.id).destroy_all
       @book.destroy
       redirect_to root_path, notice: 'Book was successfully deleted.'
     end
@@ -29,7 +30,7 @@ class AdminController < ApplicationController
     
     def book    
         student_id = params[:student_id]
-        @student = Student.find(student_id)  # Retrieve the student by ID
+        @student = Student.find(student_id)
         @books = @student.books
     end
 

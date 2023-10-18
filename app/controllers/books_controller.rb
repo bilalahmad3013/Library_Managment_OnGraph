@@ -44,6 +44,14 @@ class BooksController < ApplicationController
       @book.destroy  
       redirect_to root_url, notice: 'Book was successfully deleted.'
     end
+
+    def showstudent       
+      @book = Book.find(params[:book_id]) 
+      @students=@book.students
+       
+    end   
+      
+      
   
     private
 
