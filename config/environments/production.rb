@@ -12,6 +12,8 @@ Rails.application.configure do
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
 
+  config.serve_static_files = true
+
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
@@ -21,7 +23,7 @@ Rails.application.configure do
   # config.require_master_key = true
 
   # Enable static file serving from the `/public` folder (turn off if using NGINX/Apache for it).
-  config.public_file_server.enabled = true
+  config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present? || ENV['RENDER'].present?
 
   # Compress CSS using a preprocessor.
   # config.assets.css_compressor = :sass
@@ -72,6 +74,23 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "library_menagment_production"
 
   config.action_mailer.perform_caching = false
+
+    
+  config.action_mailer.raise_delivery_errors = true
+  config.active_record.verbose_query_logs = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: 'smtp.gmail.com',
+    port: 587,
+    # domain: 'yourdomain.com', # Your domain
+    user_name: 'iftekhar12332122@gmail.com', # Your Gmail email address
+    password: 'wtwj uafe sfxb ghda',  # Your Gmail password or app-specific password
+    authentication: 'plain',
+    enable_starttls_auto: true
+  }
+ config.action_mailer.default_url_options = { host: 'https://library-managment-system-9nns.onrender.com' } 
+ config.action_mailer.perform_deliveries = true
+ config.action_mailer.perform_caching = false
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.

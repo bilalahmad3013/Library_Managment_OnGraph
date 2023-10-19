@@ -1,0 +1,33 @@
+<div id="flash-messages" style="height: 45px; width: 100%; background-color: green; display: none; color:white">
+  <div style="padding:10px; margin-left:40%">
+  Your book request has been sent successfully.
+  </div>
+</div>
+
+
+<h3 style="margin-left:38%;margin-top:10px">There are a total of <%= @books.total_count %> books.</h3>
+<a href="/" class="card-link" style="margin-left:45%">Back to Home Page</a>
+<div class="container" style="margin-top:50px">  
+  <% @books.each do |book| %>
+    <div class="card mb-3" style="width: 300px; display: inline-block;">
+      <div class="card-header">Title-<%= book.title %></div>
+      <div class="card-body">
+        <h5 class="card-title">Author-<%= book.author %></h5>
+        <p class="card-text">Pages-<%= book.pages %></p>
+        
+        <% if current_student.books.exists?(book.id)%>
+         <button>Suscribed</button>
+        <% else %>
+        <% if !Request.where(student_id: current_student.id, book_id: book.id).exists? %>          
+          <button class="submit" id=<%= book.id %>>Request</button>
+          <% else %>
+            <button>Pending</button>
+          <%end%>
+       <%end%>
+      </div>
+    </div>
+  <% end %>
+  <div class="pagination">
+    <%= paginate @books %>
+  </div>
+</div>

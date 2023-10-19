@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby "2.7.8"
+ruby "3.0.2"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.0"
@@ -17,6 +17,24 @@ gem "puma", ">= 5.0"
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails"
 
+#CanCanCan gem for pure user authnetication
+gem 'cancancan'
+
+#Kaminari gem is for pagination
+gem 'kaminari'
+
+#to apply bootstrap javascript
+gem 'jquery-rails'
+
+#for the seeds.rb run
+gem 'seed-fu'
+
+#for test cases
+group :development, :test do
+  gem 'rspec-rails'
+end
+
+
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
 
@@ -25,6 +43,11 @@ gem "stimulus-rails"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
+
+gem 'webpacker'
+
+
+
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
@@ -61,3 +84,13 @@ group :development do
 
 end
 
+
+#for js building 
+
+gem "jsbundling-rails", "~> 1.2"
+
+# For authentication
+gem "devise", "~> 4.9"
+
+
+gem "rails-controller-testing"

@@ -1,0 +1,16 @@
+<h3 style="margin-left:38%;margin-top:10px">There are a total of <%= @students.length %> students.</h3>
+<a href="/" class="card-link" style="margin-left:45%">Back to Home Page</a>
+<div class="container" style="margin-top:50px">  
+  <% @students.each do |student| %>
+   
+    <div class="card mb-3" style="width: 300px; display: inline-block;">
+      <div class="card-header">Full Name-<%= student.first_name%> <%= student.last_name %></div>
+      <div class="card-body">
+        <p class="card-title">Email-<%= student.email %></p>  
+        <parent_controller class="card-title">Phone number-<%= student.phone_number %></parent_controller>      
+        <%= link_to 'Click to view requested books', admin_student_books_path(student_id: student.id) %>
+      </div>
+    </div>
+  <% end %>
+
+</div>

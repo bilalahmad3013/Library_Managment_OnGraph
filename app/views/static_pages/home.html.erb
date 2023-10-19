@@ -1,0 +1,23 @@
+    <%= render 'navbar'%>
+
+    <% if student_signed_in? %>
+      <h1 style="margin-left:40%">Welcome back <%=current_student.first_name%></h1>
+      <%= link_to "Click here to view all books", show_books_path, class: "btn btn-primary", style: "margin-left:35%" %>
+      <%= link_to "Click here to see all your requested books", student_requested_path, class: "btn btn-primary", style: "margin-left:50%, margin-top:10px" %>
+
+    <% elsif librarian_signed_in? %>
+      <h1 style="margin-left:40%">Welcome back <%=current_librarian.first_name%></h1>
+      <%= link_to "Wanna Post a Book!! click me", new_book_path, class: "btn btn-primary", style: "margin-left:35%" %>
+      <%= link_to "Wanna see all your Books!! click me", books_path, class: "btn btn-primary", style: "margin-left:50%, margin-top:10px" %> 
+   
+
+    <% elsif admin_signed_in? %>
+    <h1 style="margin-left:40%">Welcome back Bilal </h1>
+    <%= link_to "Click here to view all books posted by all the librarians", show_books_admin_path, class: "btn btn-primary", style: "margin-left:35%" %>
+    <%= link_to "Click here to view all Students", admin_students_path ,class: "btn btn-primary" %>
+    <% end %>
+        
+    <%= render 'crousal'%>
+    
+    <%= render 'about_page' %>
+    <%= render 'footer' %>

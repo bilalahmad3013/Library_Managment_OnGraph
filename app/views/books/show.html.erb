@@ -1,0 +1,7 @@
+<h1><%= @book.title %></h1>
+<p><strong>Author:</strong> <%= @book.author %></p>
+<p><strong>Number of Pages:</strong> <%= @book.pages %></p>
+
+<%= link_to 'Edit', edit_book_path(@book) %> |
+<%= link_to 'Delete', @book, method: :delete, data: { confirm: 'Are you sure you want to delete this book?' } %> |
+<a href="/" class="card-link">Back to Home Page</a> 

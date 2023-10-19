@@ -1,0 +1,14 @@
+<h3 style="margin-left:38%;margin-top:10px">There are a total of <%= @students.length %> students on this book</h3>
+<a href="/" class="card-link" style="margin-left:45%">Back to Home Page</a>
+<div class="container" style="margin-top:50px">  
+  <% @students.each do |student| %>   
+    <div class="card mb-3" style="width: 300px; display: inline-block;">
+      <div class="card-header">Full name-<%= student.first_name %> <%=  student.last_name %></div>
+      <div class="card-body">
+        <p class="card-title">email-<%= student.email %></p> 
+        <h5 class="card-title">Phone number-<%= student.phone_number %></h5>          
+      </div>
+    </div>
+  <% end %>
+
+</div>
