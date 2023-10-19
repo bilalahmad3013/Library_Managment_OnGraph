@@ -1,4 +1,6 @@
-class HandleRequestController < ApplicationController
+ # frozen_string_literal: true (edited) 
+ #This will handle entry in database once reqhits
+ class HandleRequestController < ApplicationController
     before_action :authenticate_librarian!
     before_action :authorize_librarian, only: [:approve_request, :cancel_request]
   

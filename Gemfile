@@ -85,10 +85,11 @@ group :development do
 end
 
 
-
+#for js building 
 
 gem "jsbundling-rails", "~> 1.2"
 
+# For authentication
 gem "devise", "~> 4.9"
 
 

@@ -1,3 +1,5 @@
+# frozen_string_literal: true (edited) 
+#this controller will create a entry in database if student req any book
 class BookRequestsController < ApplicationController
     def send_email
       book_id = params[:book_id]

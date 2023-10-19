@@ -1,3 +1,5 @@
+# frozen_string_literal: true (edited) 
+# frozen_string_literal: true (edited) 
 class StudentFeaturesController < ApplicationController
 
     def index

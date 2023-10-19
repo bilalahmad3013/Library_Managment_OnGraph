@@ -1,3 +1,5 @@
+# frozen_string_literal: true (edited) 
+# All the logics of Admin writtien in this file 
 class AdminController < ApplicationController
     before_action :authenticate_admin! 
     def index

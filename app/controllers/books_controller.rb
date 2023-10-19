@@ -1,3 +1,5 @@
+# frozen_string_literal: true (edited) 
+#This is the book controller to handle Book CRUD ops
 class BooksController < ApplicationController
      before_action :authenticate_librarian! 
   
