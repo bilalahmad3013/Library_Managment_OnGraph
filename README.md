@@ -1,24 +1,31 @@
 # README
+# My Awesome Ruby on Rails Application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome to the documentation for my Ruby on Rails application hosted on AWS.
 
-Things you may want to cover:
+## Application Details
 
-* Ruby version
+- Ruby version: 3.0.2
+- Rails version: 7.0.1
 
-* System dependencies
+## System Dependencies
 
-* Configuration
+This application relies on AWS services for hosting, so ensure you have an AWS account and necessary services set up.
 
-* Database creation
+## Configuration
 
-* Database initialization
+To configure this application, you'll need to set environment variables for AWS services and any application-specific configurations.
 
-* How to run the test suite
+## Database Setup
 
-* Services (job queues, cache servers, search engines, etc.)
+This application uses sqlite3 as the database. To create and initialize the database, follow these steps:
 
-* Deployment instructions
 
-* ...
+# Create the database
+rails db:create
+
+# Run database migrations
+rails db:migrate
+
+# Seed the database (if applicable)
+rails db:seed
