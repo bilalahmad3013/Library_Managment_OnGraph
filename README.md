@@ -4,6 +4,8 @@
 Welcome to the documentation for my Ruby on Rails application hosted on AWS.
 
 ## Application Details
+You have to first clone this repo and then verify that you have exact same versions of ruby and rails in you system. Once you have same versions you can run bundle.
+You also have to change the development.rb file for smtp configuration.
 
 - Ruby version: 3.0.2
 - Rails version: 7.0.1
